@@ -1,5 +1,5 @@
-function changeText(){
-    var textsArray = ["Text 1", "Text 2", "Text 3", "Text 4", "Text 5"];
+function changeName(){
+    var textsArray = ["Dog", "Tiger", "Lion", "Cat", "Zebra", "Monkey", "Horse", "Bear"];
     var number = getRandomNumberBetween(0, textsArray.length - 1);
 
     console.log("Index: ", number);
