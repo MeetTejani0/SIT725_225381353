@@ -1,0 +1,12 @@
+.navbar-size { width: 95%; margin: 0 auto; }
+.user-image-size { height: 56px; margin: 4px 0; }
+.main-body { background-color: #F5F5F5; color: #333; min-height: calc(100vh - 64px); padding-top: 20px; }
+.materialboxed-image { margin: 0 auto; height: 220px; display:block; }
+.click-me-button { margin-top: 20px; }
+.card 
+.card-image img { height: 220px; object-fit: cover; }
+/*.card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}*/
