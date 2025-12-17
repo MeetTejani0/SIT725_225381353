@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Books Catalog</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 24px; }
+      li { margin: 8px 0; }
+    </style>
+  </head>
+  <body>
+    <h1>Books</h1>
+    <ul id="booksList"></ul>
+
+    <script>
+      async function loadBooks() {
+        const list = document.getElementById("booksList");
+        list.innerHTML = "<li>Loading...</li>";
+
+        try {
+          const res = await fetch("/api/books");
+          const books = await res.json();
+
+          list.innerHTML = "";
+          books.forEach((b) => {
+            const li = document.createElement("li");
+            li.textContent = `${b.title} — ${b.author}`;
+            list.appendChild(li);
+          });
+        } catch (err) {
+          list.innerHTML = "<li>Error loading books</li>";
+          console.error(err);
+        }
+      }
+
+      window.addEventListener("load", loadBooks);
+    </script>
+  </body>
+</html>
